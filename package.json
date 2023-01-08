@@ -8,6 +8,7 @@
     "deploy": "fly deploy --remote-only",
     "dev": "remix dev",
     "lint": "eslint .",
+    "prepare": "husky install",
     "prettier": "prettier --write '**/*.{md,js,ts,tsx,json,yml}'",
     "start": "remix-serve build",
     "typecheck": "tsc -b"
@@ -21,12 +22,15 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0",
     "@remix-run/dev": "^1.9.0",
     "@remix-run/eslint-config": "^1.9.0",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.2",
     "typescript": "^4.8.4"
   },

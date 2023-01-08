@@ -1,4 +1,4 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -7,12 +7,18 @@ import {
   Scripts,
   ScrollRestoration
 } from '@remix-run/react';
+import appStyles from './styles/app.css';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'New Remix App',
-  viewport: 'width=device-width,initial-scale=1'
+  title: 'Move 4 Mental Health',
+  viewport: 'width=device-width,initial-scale=1',
+  keywords: 'M4MH, Move for Mental Health'
 });
+
+export const links: LinksFunction = () => {
+  return [{ rel: 'stylesheet', href: appStyles }];
+};
 
 export default function App() {
   return (

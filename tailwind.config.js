@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  mode: process.env.NODE_ENV ? 'jit' : undefined,
   content: ['./app/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: {
@@ -21,7 +22,8 @@ module.exports = {
       pastel: {
         orange: 'var(--color-pastel-orange)',
         purple: 'var(--color-pastel-purple)'
-      }
+      },
+      'dark-blue': 'rgb(15 23 42)'
     },
     extend: {
       fontFamily: {
